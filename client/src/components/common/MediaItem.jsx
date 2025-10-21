@@ -41,7 +41,6 @@ const MediaItem = ({ media, mediaType }) => {
         "&:hover .media-back-drop, &:hover .media-play-btn": { opacity: 1 },
         color: "primary.contrastText"
       }}>
-        {/* movie or tv item */}
         {mediaType !== "people" && (
           <>
             {favoriteUtils.check({ listFavorites, mediaId: media.id }) && (
@@ -112,9 +111,7 @@ const MediaItem = ({ media, mediaType }) => {
             </Box>
           </>
         )}
-        {/* movie or tv item */}
 
-        {/* people */}
         {mediaType === "people" && (
           <Box sx={{
             position: "absolute",
@@ -129,7 +126,6 @@ const MediaItem = ({ media, mediaType }) => {
             </Typography>
           </Box>
         )}
-        {/* people */}
       </Box>
     </Link>
   );

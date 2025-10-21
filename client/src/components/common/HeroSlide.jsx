@@ -11,7 +11,7 @@ import {
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { Autoplay } from "swiper"; // ✅ autoplay module
+import { Autoplay } from "swiper"; 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { toast } from "react-toastify";
 
@@ -82,9 +82,9 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
             <Swiper
                 grabCursor={true}
                 loop={true}
-                modules={[Autoplay]} // ✅ enable autoplay module
+                modules={[Autoplay]} 
                 autoplay={{
-                    delay: 3000, // 3 seconds
+                    delay: 2700, 
                     disableOnInteraction: false
                 }}
                 style={{ width: "100%", height: "max-content" }}
@@ -139,7 +139,6 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
                                 }}
                             >
                                 <Stack spacing={4} direction="column">
-                                    {/* title */}
                                     <Typography
                                         variant="h4"
                                         fontSize={{ xs: "2rem", md: "2rem", lg: "4rem" }}
@@ -152,10 +151,8 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
                                     </Typography>
 
                                     <Stack direction="row" spacing={1} alignItems="center">
-                                        {/* rating */}
                                         <CircularRate value={movie.vote_average} />
                                         <Divider orientation="vertical" />
-                                        {/* genres */}
                                         {[...movie.genre_ids].splice(0, 2).map((genreId, index) => (
                                             <Chip
                                                 variant="filled"
@@ -169,7 +166,6 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
                                         ))}
                                     </Stack>
 
-                                    {/* overview */}
                                     <Typography
                                         variant="body1"
                                         sx={{
@@ -178,8 +174,6 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
                                     >
                                         {movie.overview}
                                     </Typography>
-
-                                    {/* button */}
                                     <Button
                                         variant="contained"
                                         size="large"

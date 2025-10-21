@@ -34,9 +34,7 @@ const ReviewItem = ({ review, onRemoved }) => {
       "&:hover": { backgroundColor: "background.paper" }
     }}>
       <Stack direction="row" spacing={2}>
-        {/* avatar */}
         <TextAvatar text={review.user?.displayName} />
-        {/* avatar */}
         <Stack spacing={2} flexGrow={1}>
           <Stack spacing={1}>
             <Typography variant="h6" fontWeight="700">

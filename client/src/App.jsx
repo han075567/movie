@@ -18,7 +18,6 @@ const App = () => {
 
   return (
     <ThemeProvider theme={themeConfigs.custom({ mode: themeMode })}>
-      {/* config toastify */}
       <ToastContainer
         position="bottom-left"
         autoClose={5000}
@@ -29,10 +28,8 @@ const App = () => {
         pauseOnHover
         theme={themeMode}
       />
-      {/* mui reset css */}
       <CssBaseline />
 
-      {/* app routes */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
@@ -58,7 +55,6 @@ const App = () => {
           </Route>
         </Routes>
       </BrowserRouter>
-      {/* app routes */}
     </ThemeProvider>
   );
 };

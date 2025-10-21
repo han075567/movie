@@ -65,7 +65,6 @@ const Topbar = () => {
               </Box>
             </Stack>
 
-            {/* main menu */}
             <Box flexGrow={1} alignItems="center" display={{ xs: "none", md: "flex" }}>
               <Box sx={{ marginRight: "30px" }}>
                 <Logo />
@@ -92,14 +91,10 @@ const Topbar = () => {
                 {themeMode === themeModes.light && <WbSunnyOutlinedIcon />}
               </IconButton>
             </Box>
-            {/* main menu */}
-
-            {/* user menu */}
             <Stack spacing={3} direction="row" alignItems="center">
 
             </Stack>
             {user && <UserMenu />}
-            {/* user menu */}
           </Toolbar>
         </AppBar>
       </ScrollAppBar>
